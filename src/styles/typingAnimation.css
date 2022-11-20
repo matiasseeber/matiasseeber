@@ -1,0 +1,89 @@
+.containerTyping {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.t1 {
+    margin: 0;
+    white-space: nowrap;
+    word-wrap: break-word;
+    /* overflow: hidden; */
+    animation: type 2s steps(20, end), curser1 1s infinite;
+    border-right: 4px solid transparent;
+    animation-delay: 0;
+    transition: 0.2s;
+}
+
+.t2 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 2s steps(19, end), curser1 0.8s;
+    border-right: 8px solid white;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}
+
+.t3 {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 2s steps(19, end), curser1 0.8s infinite;
+    border-right: 8px solid white;
+    animation-fill-mode: both;
+    animation-delay: 6s;
+}
+
+.t1:active {
+    border-right: 8px solid transparent;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes curser {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes curser1 {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
