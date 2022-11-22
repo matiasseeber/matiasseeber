@@ -20,7 +20,7 @@ export const Hero = () => {
                         <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left'>
                             I build things for the web, i also can design and work with databases.
                         </p>
-                        <a className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-125 duration-500 md:btn-lg transition-all cursor-pointer'>
+                        <a href="MatiasSeeberEnglishCV.pdf" download={"MatiasSeeberEnglishCV"} className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-125 duration-500 md:btn-lg transition-all cursor-pointer'>
                             Download resume
                         </a>
                     </div>
