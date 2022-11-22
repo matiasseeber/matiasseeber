@@ -1,0 +1,11 @@
+.hiddenAnimation{
+    opacity: 0;
+    transition: all 1.5s;
+    transform: translateX(-100%);
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}

@@ -18,7 +18,7 @@ export const Header = () => {
                     <img src="" alt="" />
                     Matias Seeber
                 </a>
-                <div className="hidden lg:block">
+                <div className="hidden lg:block w-[33%]">
                     <Nav />
                 </div>
                 <div className="hidden lg:block">

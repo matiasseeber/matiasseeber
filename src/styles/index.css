@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply font-body text-paragraph leading-6 bg-gray-200;
+    scroll-behavior: smooth
   }
   h1,
   h2,
@@ -39,6 +40,7 @@
     @apply bg-secondary resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1 focus:outline-accent;
   }
   .active {
-    @apply text-accent;
+    @apply text-accent-hover;
+    scale: 1.25;
   }
 }

@@ -15,13 +15,10 @@ export const Hero = () => {
                             {/* I build things <br /> for the web */}
                             <div>
                                 <h3 className='text t1 font-inter xl:text-[50px] text-[30px]'>C:\mseeber\> Fullstack <span className='text-accent-hover'>Developer</span></h3>
-                                {/* <h1 className='text t2 font-inter'>C:\Users\> </h1>
-                                <h1 className='text t3 font-inter'>C:\Users\> Find US --></h1> */}
                             </div>
                         </h1>
                         <p className='pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing illo ad labore
-                            dolor elit.
+                            I build things for the web, i also can design and work with databases.
                         </p>
                         <a className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-125 duration-500 md:btn-lg transition-all cursor-pointer'>
                             Download resume
