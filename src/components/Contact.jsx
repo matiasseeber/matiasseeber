@@ -46,9 +46,8 @@ export const Contact = () => {
                     <h2 className='font-inter section-title before:content-contact relative before:absolute before:opacity-40 before:-top-7 before:-left-40 before:hidden before:lg:block'>
                         Contact me
                     </h2>
-                    <p className='subtitle'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam
-                        labore nisium illum cupiditate reiciendis a numquam
+                    <p className='subtitle mb-14'>
+                        Have any comments or want to contact me?, send me an email via de form entering your contact details!
                     </p>
                 </div>
                 <div
