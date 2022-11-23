@@ -75,12 +75,12 @@ export const About = () => {
                     <div className="border-2-2 absolute border-opacity-20 border-accent-hover h-full border" style={{ left: "50%" }}></div>
                     {
                         timeline.map((item, index) =>
-                            <div className={`mb-8 flex justify-between items-center w-full ${index % 2 != 0 ? "flex-row-reverse left-timeline" : "right-timeline"} font-inter hiddenAnimation`}>
+                            <div className={`mb-8 flex max-sm:flex-col justify-between items-center w-full ${index % 2 != 0 ? "flex-row-reverse left-timeline" : "right-timeline"} font-inter hiddenAnimation`}>
                                 <div className="order-1 w-5/12"></div>
-                                <div className="z-9 flex items-center justify-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full">
+                                <div className="z-9 flex items-center justify-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full max-sm:mb-6">
                                     <h1 className="mx-auto font-inter text-lg text-white">{index + 1}</h1>
                                 </div>
-                                <div className="order-1 bg-accent rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <div className="order-1 bg-accent rounded-lg shadow-xl w-5/12 max-sm:w-full px-6 py-4">
                                     <h3 className="mb-3 font-inter text-white text-xl">{item.date}</h3>
                                     <h3 className="mb-3 font-inter text-white text-xl">{item.title}</h3>
                                     <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">{item.text}</p>

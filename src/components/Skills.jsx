@@ -2,31 +2,31 @@ import { useEffect } from "react";
 
 export const skills = [
     {
-        image: "/src/assets/imgs/skills/html5.png",
+        image: "./assets/imgs/skills/html5.png",
     },
     {
-        image: "/src/assets/imgs/skills/css3.png",
+        image: "./assets/imgs/skills/css3.png",
     },
     {
-        image: "/src/assets/imgs/skills/1200px-Sass_Logo_Color.svg.png",
+        image: "./assets/imgs/skills/1200px-Sass_Logo_Color.svg.png",
     },
     {
-        image: "/src/assets/imgs/skills/js.png",
+        image: "./assets/imgs/skills/js.png",
     },
     {
-        image: "/src/assets/imgs/skills/Java.png",
+        image: "./assets/imgs/skills/Java.png",
     },
     {
-        image: "/src/assets/imgs/skills/nodejs.png",
+        image: "./assets/imgs/skills/nodejs.png",
     },
     {
-        image: "/src/assets/imgs/skills/reactjs.png",
+        image: "./assets/imgs/skills/reactjs.png",
     },
     {
-        image: "/src/assets/imgs/skills/git.png",
+        image: "./assets/imgs/skills/git.png",
     },
     {
-        image: "/src/assets/imgs/skills/tailwindcss.png",
+        image: "./assets/imgs/skills/tailwindcss.png",
     },
 ];
 
