@@ -39,6 +39,25 @@ const timeline = [
         text: "After stuying the whole year trying to balance personal life, work and univeristy I finishied both semester without failing no subject and passing everything without having to do no final examns for any of them. I passed 15 subjects and got my second associate degree but this time in Informatic Systems."
     },
     {
+        date: "January 2023 - IOF Company",
+        title: "Second job as a software developer",
+        text: "After more than a year in my previous job I decided to change my job to learn new technologies.",
+        items: [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Node JS",
+            "Typescript",
+            "Express JS",
+            "Javascript",
+            "MySQL",
+            "Postgres",
+            "AWS",
+            "Linux",
+            "Git"
+        ]
+    },
+    {
         title: "To be continued...",
     },
 ]
