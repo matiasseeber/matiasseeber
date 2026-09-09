@@ -1,7 +1,6 @@
 import { About } from "./components/About";
 import { Header } from "./components/Header"
 import { Hero } from "./components/Hero";
-import { Portfolio } from "./components/Portfolio";
 import { Skills } from "./components/Skills";
 import { Contact } from "./components/Contact";
 import { useEffect } from "react";
@@ -30,7 +29,6 @@ export const App = () => {
             <Hero />
             <About />
             <Skills />
-            <Portfolio />
             <Contact />
             <Footer />
         </div>

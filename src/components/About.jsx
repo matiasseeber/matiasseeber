@@ -5,20 +5,47 @@ const workExperience = [
         date: "July 2025 - Present",
         title: "Senior Backend Engineer - Intramed (Roemmers group)",
         text: "Building social network products used by more than one million people, with a focus on event-driven microservices, scalable algorithms and reliable cloud deployments.",
-        items: ["Node.js", "NestJS", "TypeScript", "Kafka", "Redis", "PostgreSQL", "MySQL", "AWS", "Jest"]
+        items: ["Node.js", "NestJS", "TypeScript", "Kafka", "Redis", "PostgreSQL", "MySQL", "AWS", "Jest"],
+        logo: "./assets/imgs/companies/intramednet_logo.jfif"
     },
     {
         date: "January 2023 - June 2025",
         title: "Backend Engineer - SiloReal",
         text: "Led the backend platform serving web, internal, Android and iOS products. Delivered geospatial tools, IoT and satellite integrations, machine learning services and blockchain integrations.",
-        items: ["Node.js", "Express.js", "NestJS", "TypeScript", "Prisma", "PostGIS", "AWS", "Python", "TensorFlow", "Solidity"]
+        items: ["Node.js", "Express.js", "NestJS", "TypeScript", "Prisma", "PostGIS", "AWS", "Python", "TensorFlow", "Solidity"],
+        logo: "./assets/imgs/companies/siloreal_logo.jfif"
     },
     {
         date: "November 2021 - December 2022",
         title: "Software Developer - Request S.A",
         text: "Developed implementations and ERP integrations for the Esker SaaS platform, while collaborating with major clients such as Siemens, YPF and Cisco in English and Spanish.",
-        items: ["JavaScript", "JSON", "CSV", "XML", "Git", "Scrum", "SAP", "Oracle"]
+        items: ["JavaScript", "JSON", "CSV", "XML", "Git", "Scrum", "SAP", "Oracle"],
+        logo: "./assets/imgs/companies/request.jfif"
     }
+]
+
+const companyExperience = [
+    {
+        name: "Intramed",
+        detail: "Roemmers group",
+        logo: "./assets/imgs/companies/intramednet_logo.jfif",
+        role: "Senior Backend Engineer",
+        focus: "Event-driven microservices, social network products and cloud infrastructure."
+    },
+    {
+        name: "SiloReal",
+        detail: "Agro technology",
+        logo: "./assets/imgs/companies/siloreal_logo.jfif",
+        role: "Backend Engineer",
+        focus: "Backend platform, geospatial services, IoT, machine learning and blockchain."
+    },
+    {
+        name: "Request S.A",
+        detail: "Fintech / SaaS",
+        logo: "./assets/imgs/companies/request.jfif",
+        role: "Software Developer",
+        focus: "Esker implementations, ERP integrations and client-facing delivery."
+    },
 ]
 
 const education = [
@@ -42,8 +69,17 @@ const education = [
 const TimelineItem = ({ item, index }) => (
     <article className='relative border-l border-accent/40 pb-8 pl-8 last:pb-0'>
         <span className='absolute -left-[9px] top-0 flex h-4 w-4 items-center justify-center rounded-full border-4 border-secondary bg-accent' aria-hidden='true'></span>
-        <p className='mb-2 text-xs uppercase tracking-[0.18em] text-accent-hover'>{item.date}</p>
-        <h3 className='mb-3 font-inter text-lg text-white lg:text-xl'>{item.title}</h3>
+        <div className='mb-4 flex items-center gap-3'>
+            {item.logo && (
+                <div className='flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-sm bg-[#e8e6df]'>
+                    <img className='h-full w-full object-cover object-left mix-blend-multiply' src={item.logo} alt={`${item.title} logo`} />
+                </div>
+            )}
+            <div>
+                <p className='mb-2 text-xs uppercase tracking-[0.18em] text-accent-hover'>{item.date}</p>
+                <h3 className='font-inter text-lg text-white lg:text-xl'>{item.title}</h3>
+            </div>
+        </div>
         <p className='text-sm leading-relaxed tracking-wide text-paragraph'>{item.text}</p>
         {
             item.items && item.items.length > 0 &&
@@ -72,11 +108,11 @@ export const About = () => {
                                 Matias Seeber
                             </h2>
                             <p className='mb-4 text-accent'>
-                                Backend and frontend engineer
+                                Backend Engineer · Platform & Product Systems
                             </p>
                             <hr className='mb-8 opacity-5' />
                             <p className='mb-8'>
-                                IT professional with over four years of experience building backend and frontend products. I work across TypeScript, JavaScript, Node.js, NestJS, React and relational and document databases, with a strong focus on technical excellence and continuous improvement.
+                                Backend engineer with 4+ years of experience designing and delivering scalable systems, event-driven architectures, and product platforms used by large user bases. I work across Node.js, TypeScript, NestJS, PostgreSQL, Kafka, AWS, and cloud-native services, with a strong focus on reliability, performance, clean architecture, and continuous improvement.
                             </p>
                         </div>
                         <Link to="contact" activeClass="active" spy={true} smooth={true} duration={500} offset={-70} className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-105 transition-all duration-500' href="#contact">
@@ -85,7 +121,7 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-            <div className='container mx-auto mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16'>
+            <div className='container mx-auto mt-20 grid gap-14 lg:grid-cols-[1.5fr_1fr] lg:gap-20'>
                 <div className='hiddenAnimation'>
                     <p className='mb-3 text-xs uppercase tracking-[0.3em] text-accent-hover'>Experience</p>
                     <h2 className='mb-10 font-inter text-2xl text-white lg:text-3xl'>Work</h2>
