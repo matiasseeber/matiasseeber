@@ -1,125 +1,104 @@
 import { Link } from "react-scroll";
 
-const timeline = [
+const workExperience = [
     {
-        date: "March 2019 - Universidad Tecnologica Nacional",
-        title: "Enrolled to University",
-        text: 'After finishing high school I enrolled to do an associete degree in Programming at the Unviersidad Tecnologica Nacional (National Technologic University)'
+        date: "July 2025 - Present",
+        title: "Senior Backend Engineer - Intramed (Roemmers group)",
+        text: "Building social network products used by more than one million people, with a focus on event-driven microservices, scalable algorithms and reliable cloud deployments.",
+        items: ["Node.js", "NestJS", "TypeScript", "Kafka", "Redis", "PostgreSQL", "MySQL", "AWS", "Jest"]
     },
     {
-        date: "August 2019 - Universidad Tecnologica Nacional",
-        title: "First line of code",
-        text: 'After passing the entry course and examns of University I wrote my first lines of code in C++ in the subject "Computer Lab".'
+        date: "January 2023 - June 2025",
+        title: "Backend Engineer - SiloReal",
+        text: "Led the backend platform serving web, internal, Android and iOS products. Delivered geospatial tools, IoT and satellite integrations, machine learning services and blockchain integrations.",
+        items: ["Node.js", "Express.js", "NestJS", "TypeScript", "Prisma", "PostGIS", "AWS", "Python", "TensorFlow", "Solidity"]
     },
     {
-        date: "July 2021 - Universidad Tecnologica Nacional",
-        title: "Graduated as an Associate in Progrmming",
-        text: "After two years of study and more than 20 subjects I got my Associate Degree in programming with an avarge of 8,6 out of 10"
+        date: "November 2021 - December 2022",
+        title: "Software Developer - Request S.A",
+        text: "Developed implementations and ERP integrations for the Esker SaaS platform, while collaborating with major clients such as Siemens, YPF and Cisco in English and Spanish.",
+        items: ["JavaScript", "JSON", "CSV", "XML", "Git", "Scrum", "SAP", "Oracle"]
+    }
+]
+
+const education = [
+    {
+        date: "2023 - 2024",
+        title: "Bachelor's Degree in IT - Universidad de Palermo",
+        text: "Completed a Bachelor's degree in Information Technology, strengthening my foundations in software engineering, systems design and professional development."
     },
     {
-        date: "November 2021 - Request S.A",
-        title: "My first job as a software developer",
-        text: "After many interviews I got my first job as a full time software developer, in which I work with Javascript and Git in a propietary software called Esker.",
-        items: [
-            "Javascript",
-            "Git",
-            "Scrum",
-            "Integrations with ERPs (SAP, Oracle, etc)",
-            "Comunication with clients (Meetings and Emails, English and Spanish)"
-        ]
+        date: "2022",
+        title: "Associate Degree in Computer Systems - UTN",
+        text: "Completed an associate degree focused on the analysis, design and implementation of information systems."
     },
     {
-        date: "March 2022 - Universidad Tecnologica Nacional",
-        title: "Continued studying",
-        text: "After finishing the first associate carrer, a semester off of studying and working after a coulpe of months full-time I started studying again so i could get another assoicate degree in Informatic Systems"
-    },
-    {
-        date: "November 2022 - Universidad Tecnologica Nacional",
-        title: "Got another associate degree",
-        text: "After stuying the whole year trying to balance personal life, work and univeristy I finishied both semester without failing no subject and passing everything without having to do no final examns for any of them. I passed 15 subjects and got my second associate degree but this time in Informatic Systems."
-    },
-    {
-        date: "January 2023 - IOF Company",
-        title: "Second job as a software developer",
-        text: "After more than a year in my previous job I decided to change my job to learn new technologies.",
-        items: [
-            "HTML",
-            "CSS",
-            "Bootstrap",
-            "Node JS",
-            "Typescript",
-            "Express JS",
-            "Javascript",
-            "MySQL",
-            "Postgres",
-            "AWS",
-            "Linux",
-            "Git"
-        ]
-    },
-    {
-        title: "To be continued...",
+        date: "2019 - 2021",
+        title: "Associate Degree in Programming - UTN",
+        text: "Completed an associate degree in programming, building the foundation for more than four years of professional backend and frontend development."
     },
 ]
+
+const TimelineItem = ({ item, index }) => (
+    <article className='relative border-l border-accent/40 pb-8 pl-8 last:pb-0'>
+        <span className='absolute -left-[9px] top-0 flex h-4 w-4 items-center justify-center rounded-full border-4 border-secondary bg-accent' aria-hidden='true'></span>
+        <p className='mb-2 text-xs uppercase tracking-[0.18em] text-accent-hover'>{item.date}</p>
+        <h3 className='mb-3 font-inter text-lg text-white lg:text-xl'>{item.title}</h3>
+        <p className='text-sm leading-relaxed tracking-wide text-paragraph'>{item.text}</p>
+        {
+            item.items && item.items.length > 0 &&
+            <ul className='mt-5 flex flex-wrap gap-2 font-inter text-xs text-white'>
+                {
+                    item.items.map((skill) =>
+                        <li key={skill} className='rounded-sm border border-accent/50 px-2 py-1 text-paragraph'>
+                            {skill}
+                        </li>
+                    )
+                }
+            </ul>
+        }
+    </article>
+)
 
 export const About = () => {
     return (
         <section className='section bg-secondary' id='about'>
             <div className='container mx-auto hiddenAnimation'>
-                <div className='flex flex-col xl:flex-row gap-24'>
-                    <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
+                <div className='flex flex-col xl:flex-row gap-16 xl:gap-24'>
+                    <div className='flex flex-col items-center text-center lg:items-start lg:text-left xl:w-5/12'>
                         <div className='flex flex-col'>
+                            <p className='mb-3 text-xs uppercase tracking-[0.3em] text-accent-hover'>Profile</p>
                             <h2 className='text-3xl lg:text-4xl font-inter lg:font-extrabold mb-3 before:content-about relative before:absolute before:opacity-40 before:-top-[2rem] before:hidden before:lg:block'>
                                 Matias Seeber
                             </h2>
                             <p className='mb-4 text-accent'>
-                                Full stack developer
+                                Backend and frontend engineer
                             </p>
                             <hr className='mb-8 opacity-5' />
                             <p className='mb-8'>
-                                I'm a Fullstack developer of 22 years old. I have an associate degree in programming and another one in infromatic sistems. Both of those degrees are in the National Technologic University (UTN).<br />
-                                I'm also doing a bachellors in IT (Informatic sistems) at the University of Palermo (Universidad de Palermo) and have yet to do 16 subjects to graduate. <br />
-                                I have been coding for more than three years to date and have been working as a full time developer for more than a year.
-                                I have experience working with big companies like Siemens, YPF, Cisco and many more.
+                                IT professional with over four years of experience building backend and frontend products. I work across TypeScript, JavaScript, Node.js, NestJS, React and relational and document databases, with a strong focus on technical excellence and continuous improvement.
                             </p>
                         </div>
-                        <Link to="contact" activeClass="active" spy={true} smooth={true} duration={500} offset={-70} className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-125 transition-all duration-500' href="#contact">
+                        <Link to="contact" activeClass="active" spy={true} smooth={true} duration={500} offset={-70} className='btn btn-md bg-accent hover:bg-secondary-hover hover:scale-105 transition-all duration-500' href="#contact">
                             Contact me
                         </Link>
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto w-full h-full">
-                <div className="relative wrap overflow-hidden p-10 h-full">
-                    <div className="border-2-2 absolute border-opacity-20 border-accent-hover h-full border" style={{ left: "50%" }}></div>
-                    {
-                        timeline.map((item, index) =>
-                            <div className={`mb-8 flex max-sm:flex-col justify-between items-center w-full ${index % 2 != 0 ? "flex-row-reverse left-timeline" : "right-timeline"} font-inter hiddenAnimation`}>
-                                <div className="order-1 w-5/12"></div>
-                                <div className="z-9 flex items-center justify-center order-1 bg-accent shadow-xl w-8 h-8 rounded-full max-sm:mb-6">
-                                    <h1 className="mx-auto font-inter text-lg text-white">{index + 1}</h1>
-                                </div>
-                                <div className="order-1 bg-accent rounded-lg shadow-xl w-5/12 max-sm:w-full px-6 py-4">
-                                    <h3 className="mb-3 font-inter text-white text-xl">{item.date}</h3>
-                                    <h3 className="mb-3 font-inter text-white text-xl">{item.title}</h3>
-                                    <p className="text-sm leading-snug tracking-wide text-white text-opacity-100">{item.text}</p>
-                                    {
-                                        item.items && item.items.length > 0 &&
-                                        <ul className="font-inter text-sm text-white list-disc">
-                                            <p className="border-b-2 block w-fit">Skills: </p>
-                                            {
-                                                item.items.map((skill, index) =>
-                                                    <li className="ml-14">
-                                                        {skill}
-                                                    </li>
-                                                )
-                                            }
-                                        </ul>
-                                    }
-                                </div>
-                            </div>
-                        )
-                    }
+            <div className='container mx-auto mt-16 grid gap-14 lg:grid-cols-2 lg:gap-16'>
+                <div className='hiddenAnimation'>
+                    <p className='mb-3 text-xs uppercase tracking-[0.3em] text-accent-hover'>Experience</p>
+                    <h2 className='mb-10 font-inter text-2xl text-white lg:text-3xl'>Work</h2>
+                    <div className='space-y-8'>
+                        {workExperience.map((item, index) => <TimelineItem item={item} index={index} key={item.title} />)}
+                    </div>
+                </div>
+                <div className='hiddenAnimation'>
+                    <p className='mb-3 text-xs uppercase tracking-[0.3em] text-accent-hover'>Learning path</p>
+                    <h2 className='mb-10 font-inter text-2xl text-white lg:text-3xl'>Education</h2>
+                    <div className='space-y-8'>
+                        {education.map((item, index) => <TimelineItem item={item} index={index} key={item.title} />)}
+                    </div>
                 </div>
             </div>
         </section>

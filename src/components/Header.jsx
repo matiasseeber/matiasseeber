@@ -14,8 +14,7 @@ export const Header = () => {
     return (
         <header className={`${bg ? "bg-tertiary h-20" : "h-24"} flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}>
             <div className="container mx-auto h-full flex items-center justify-between">
-                <a href="" className="font-inter">
-                    <img src="" alt="" />
+                <a href="#home" className="font-inter">
                     Matias Seeber
                 </a>
                 <div className="hidden lg:block w-[33%]">

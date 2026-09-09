@@ -76,7 +76,7 @@ export const Contact = () => {
                         className='space-y-8 w-full max-w-[780px] hiddenAnimation'
                         onSubmit={handleOnSubmit}
                     >
-                        <div className='flex gap-8'>
+                        <div className='flex flex-col gap-8 sm:flex-row'>
                             <input className='input' type='text' placeholder='Your name' name='name' required={true} />
                             <input className='input' type='email' placeholder='Your email' name='email' required={true} />
                         </div>
@@ -85,7 +85,7 @@ export const Contact = () => {
                             className='textarea'
                             placeholder='Your message' required={true} name='message'
                         ></textarea>
-                        <button className='btn btn-lg bg-accent hover:bg-secondary-hover transition-all hover:scale-125 transition-all duration-500' type='submit'>
+                        <button className='btn btn-lg bg-accent hover:bg-secondary-hover transition-all hover:scale-105 duration-500' type='submit'>
                             Send message
                         </button>
                         <div className=''>

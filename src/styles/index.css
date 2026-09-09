@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-parallax-grid,
+.hero-parallax-terminal {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-parallax-grid,
+  .hero-parallax-terminal {
+    transform: none !important;
+  }
+}
+
 @layer base {
   body {
     @apply font-body text-paragraph leading-6 bg-gray-200;
